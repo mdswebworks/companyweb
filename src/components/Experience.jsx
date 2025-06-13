@@ -59,14 +59,20 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <br></br>
+      <motion.div
+  variants={textVariant()}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: true, amount: 0.25 }}
+>
+  <br />
+  <br />
+  <h2 className={`${styles.sectionHeadText} text-center`}>
+    List of Services
+  </h2>
+</motion.div>
 
-        <br></br>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
-          List of Services
-        </h2>
-      </motion.div>
+     
 
       <div className='mt-20 flex flex-col'>
         <VerticalTimeline>
